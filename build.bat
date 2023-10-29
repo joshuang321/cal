@@ -1,0 +1,1 @@
+cl /FAcs /Facal.asm /Z7 main.c /Fe:cal.exe /link user32.lib gdi32.lib /DEBUG:FULL

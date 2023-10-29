@@ -1,0 +1,94 @@
+--------------------------------
+|  type  |  operator  |  type  |
+--------------------------------
+
+Types of operators
+. +
+. -
+. *
+. /
+. ^
+. <<
+. >>
+. &
+. &&
+. |
+. ||
+. >
+. <
+. >=
+. <=
+. ==
+. !=
+. .
+. =	(needs first type to be a declaration of a variable) (maybe avoid adding this first ..)
+. := 	(assignment ?)
+
+A variable has to be undeclared before assignment!
+
+An operation must return a value!
+
+Posiible types
+. bool
+. real
+. u8
+. u16
+. u32
+. u64
+. i8
+. i16
+. i32
+. i64
+. f32
+. f64
+
+Container types:
+. vector
+. matrix
+
+--------------------------------------------------
+|  closure  | closure-semantics  |  end-colsure  |
+--------------------------------------------------
+
+for example:
+a = (1, 1, 1) (vec3)
+b = ((1, 1, 1), (1, 1, 1))
+
+closures must return a value!
+
+Many ways to construct
+
+. Symbolic constructor (through closures?)
+. Copy/Clone constructor (for example a =b)
+. Functional constructor (for example a =f64(b)
+
+(NOTE: Construction is just part of operator semantics and non-unique!)
+
+Reserved function names:
+. bool
+. real
+. u8
+. u16
+. u32
+. u64
+. i8
+. etc
+
+Function semantics:
+. It must return a value!
+. Imagine a hypothetical function:
+deff f = x +y
+
+f will then have the following signature: f(x, y)
+
+. Functions can be used to construct new functions as long as paremeter count >1, example:
+deff g = f(x=1) or f(1)
+
+OR
+
+deff g = f(y=1)
+
+.Functions must evaluate to a value if paremeter count ==1 however, for example:
+r = g(1) or g(y=1)
+OR
+r = g(1) or g(x=1)

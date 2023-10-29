@@ -1,0 +1,1 @@
+cl /Z7 /DDO_TC lang_v2.c /Fe:lang.exe /link user32.lib gdi32.lib /DEBUG:FULL
